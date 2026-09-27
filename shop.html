@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ATLAS — Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            ATLAS
+        </a>
+
+        <nav class="nav-links">
+
+            <a href="index.html">Accueil</a>
+
+            <a href="shop.html">Shop</a>
+
+            <a href="shop.html">Sports</a>
+
+            <a href="shop.html">Nouveautés</a>
+
+        </nav>
+
+        <div class="nav-actions">
+
+            <button
+                id="searchButton"
+                type="button"
+                aria-label="Rechercher"
+            >
+                ⌕
+            </button>
+
+            <button
+                id="favoriteButton"
+                type="button"
+                aria-label="Favoris"
+            >
+                ♡
+            </button>
+
+            <button
+                id="cartButton"
+                type="button"
+                aria-label="Panier"
+            >
+                🛒
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         SEARCH OVERLAY
+    ========================== -->
+
+    <div
+        id="searchOverlay"
+        class="search-overlay"
+        aria-hidden="true"
+    >
+
+        <div class="search-overlay-content">
+
+            <div class="search-top">
+
+                <span>ATLAS SEARCH</span>
+
+                <button
+                    id="closeSearch"
+                    type="button"
+                    aria-label="Fermer"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <div class="search-box">
+
+                <span class="search-icon">
+                    ⌕
+                </span>
+
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Rechercher un produit..."
+                    autocomplete="off"
+                >
+
+                <button
+                    id="clearSearch"
+                    type="button"
+                    aria-label="Effacer"
+                >
+                    ×
+                </button>
+
+            </div>
+
+            <p class="search-hint">
+                Recherche par nom, catégorie ou type de produit.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         SHOP
+    ========================== -->
+
+    <main>
+
+        <!-- =========================
+             SHOP HEADER
+        ========================== -->
+
+        <section class="shop-header">
+
+            <p class="small-title">
+                ATLAS / SHOP
+            </p>
+
+            <h1>
+                Explore<br>
+                everything.
+            </h1>
+
+            <p>
+                Découvre notre sélection de produits
+                conçus pour accompagner chaque mouvement.
+            </p>
+
+        </section>
+
+
+        <!-- =========================
+             FILTERS
+        ========================== -->
+
+        <section class="shop-controls">
+
+            <div class="categories">
+
+                <button
+                    class="filter active"
+                    data-category="all"
+                    type="button"
+                >
+                    Tous
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="hommes"
+                    type="button"
+                >
+                    Hommes
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="femmes"
+                    type="button"
+                >
+                    Femmes
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="enfants"
+                    type="button"
+                >
+                    Enfants
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="running"
+                    type="button"
+                >
+                    Running
+                </button>
+
+                <button
+                    class="filter"
+                    data-category="training"
+                    type="button"
+                >
+                    Training
+                </button>
+
+            </div>
+
+
+            <div class="sort">
+
+                <label for="sortProducts">
+                    Trier par
+                </label>
+
+                <select id="sortProducts">
+
+                    <option value="featured">
+                        Recommandés
+                    </option>
+
+                    <option value="price-low">
+                        Prix : croissant
+                    </option>
+
+                    <option value="price-high">
+                        Prix : décroissant
+                    </option>
+
+                    <option value="new">
+                        Nouveautés
+                    </option>
+
+                </select>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRODUCTS
+        ========================== -->
+
+        <section
+            class="shop-products"
+            id="shopProducts"
+        >
+
+            <!-- PRODUCT 1 -->
+
+            <article
+                class="shop-product"
+                data-category="hommes running"
+                data-price="899"
+                data-new="1"
+            >
+
+                <div
+                    class="shop-product-image"
+                    data-product-link="product.html?id=atlas-runner"
+                    role="link"
+                    tabindex="0"
+                >
+
+                    <span>NEW</span>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <div>
+
+                        <h3>
+                            Atlas Runner
+                        </h3>
+
+                        <p>
+                            Chaussures Running
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        899 DH
+                    </strong>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    type="button"
+                    data-name="Atlas Runner"
+                    data-price="899"
+                    data-description="Chaussures Running"
+                >
+                    Ajouter au panier
+                </button>
+
+                <button
+                    class="view-product"
+                    type="button"
+                    data-product-link="product.html?id=atlas-runner"
+                >
+                    Voir le produit
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCT 2 -->
+
+            <article
+                class="shop-product"
+                data-category="hommes training"
+                data-price="549"
+                data-new="1"
+            >
+
+                <div
+                    class="shop-product-image image-two"
+                    data-product-link="product.html?id=motion-hoodie"
+                    role="link"
+                    tabindex="0"
+                >
+
+                    <span>NEW</span>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <div>
+
+                        <h3>
+                            Motion Hoodie
+                        </h3>
+
+                        <p>
+                            Training
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        549 DH
+                    </strong>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    type="button"
+                    data-name="Motion Hoodie"
+                    data-price="549"
+                    data-description="Training"
+                >
+                    Ajouter au panier
+                </button>
+
+                <button
+                    class="view-product"
+                    type="button"
+                    data-product-link="product.html?id=motion-hoodie"
+                >
+                    Voir le produit
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCT 3 -->
+
+            <article
+                class="shop-product"
+                data-category="femmes sport"
+                data-price="299"
+                data-new="1"
+            >
+
+                <div
+                    class="shop-product-image image-three"
+                    data-product-link="product.html?id=performance-tee"
+                    role="link"
+                    tabindex="0"
+                >
+
+                    <span>NEW</span>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <div>
+
+                        <h3>
+                            Performance Tee
+                        </h3>
+
+                        <p>
+                            Sport
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        299 DH
+                    </strong>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    type="button"
+                    data-name="Performance Tee"
+                    data-price="299"
+                    data-description="Sport"
+                >
+                    Ajouter au panier
+                </button>
+
+                <button
+                    class="view-product"
+                    type="button"
+                    data-product-link="product.html?id=performance-tee"
+                >
+                    Voir le produit
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCT 4 -->
+
+            <article
+                class="shop-product"
+                data-category="hommes training"
+                data-price="749"
+                data-new="0"
+            >
+
+                <div
+                    class="shop-product-image image-four"
+                    data-product-link="product.html?id=training-pro"
+                    role="link"
+                    tabindex="0"
+                >
+
+                    <span>NEW</span>
+
+                </div>
+
+                <div class="shop-product-info">
+
+                    <div>
+
+                        <h3>
+                            Training Pro
+                        </h3>
+
+                        <p>
+                            Training
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        749 DH
+                    </strong>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    type="button"
+                    data-name="Training Pro"
+                    data-price="749"
+                    data-description="Training"
+                >
+                    Ajouter au panier
+                </button>
+
+                <button
+                    class="view-product"
+                    type="button"
+                    data-product-link="product.html?id=training-pro"
+                >
+                    Voir le produit
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCT 5 -->
+
+            <article
+                class="shop-product"
+                data-category="femmes lifestyle"
+                data-price="399"
+                data-new="0"
+            >
+
+                <div
+                    class="shop-product-image image-five"
+                    data-product-link="product.html?id=atlas-essential"
+                    role="link"
+                    tabindex="0"
+                >
+                </div>
+
+                <div class="shop-product-info">
+
+                    <div>
+
+                        <h3>
+                            Atlas Essential
+                        </h3>
+
+                        <p>
+                            Lifestyle
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        399 DH
+                    </strong>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    type="button"
+                    data-name="Atlas Essential"
+                    data-price="399"
+                    data-description="Lifestyle"
+                >
+                    Ajouter au panier
+                </button>
+
+                <button
+                    class="view-product"
+                    type="button"
+                    data-product-link="product.html?id=atlas-essential"
+                >
+                    Voir le produit
+                </button>
+
+            </article>
+
+
+            <!-- PRODUCT 6 -->
+
+            <article
+                class="shop-product"
+                data-category="hommes training"
+                data-price="349"
+                data-new="0"
+            >
+
+                <div
+                    class="shop-product-image image-six"
+                    data-product-link="product.html?id=move-shorts"
+                    role="link"
+                    tabindex="0"
+                >
+                </div>
+
+                <div class="shop-product-info">
+
+                    <div>
+
+                        <h3>
+                            Move Shorts
+                        </h3>
+
+                        <p>
+                            Training
+                        </p>
+
+                    </div>
+
+                    <strong>
+                        349 DH
+                    </strong>
+
+                </div>
+
+                <button
+                    class="add-cart"
+                    type="button"
+                    data-name="Move Shorts"
+                    data-price="349"
+                    data-description="Training"
+                >
+                    Ajouter au panier
+                </button>
+
+                <button
+                    class="view-product"
+                    type="button"
+                    data-product-link="product.html?id=move-shorts"
+                >
+                    Voir le produit
+                </button>
+
+            </article>
+
+        </section>
+
+
+        <!-- =========================
+             EMPTY SEARCH
+        ========================== -->
+
+        <div
+            id="noSearchResults"
+            class="no-search-results"
+            hidden
+        >
+
+            <h2>
+                Aucun produit trouvé
+            </h2>
+
+            <p>
+                Essaie avec un autre nom ou une autre catégorie.
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <div class="footer-top">
+
+            <div class="footer-brand">
+
+                <div class="logo">
+                    ATLAS
+                </div>
+
+                <p>
+                    Move. Create. Explore.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Shop
+                </h4>
+
+                <a href="shop.html">Hommes</a>
+                <a href="shop.html">Femmes</a>
+                <a href="shop.html">Enfants</a>
+                <a href="shop.html">Nouveautés</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Sports
+                </h4>
+
+                <a href="shop.html">Running</a>
+                <a href="shop.html">Football</a>
+                <a href="shop.html">Training</a>
+                <a href="shop.html">Lifestyle</a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>
+                    Aide
+                </h4>
+
+                <a href="#">Contact</a>
+                <a href="#">Livraison</a>
+                <a href="#">Retours</a>
+                <a href="#">FAQ</a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 ATLAS. Tous droits réservés.
+            </p>
+
+            <div>
+
+                <a href="#">Instagram</a>
+                <a href="#">TikTok</a>
+                <a href="#">Facebook</a>
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
